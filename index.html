@@ -16,52 +16,29 @@
 
 
   <style>
-  @page { size: A4 landscape; }
+  @page { size: A5 ; }
 body{ background:#4A90E2; display:flex; align-items:center; 
   font-size: 14.5px;
   }
 
-textarea{  
-  display: block;
-  width: 100%;
-  -webkit-box-sizing: border-box; 
-  -moz-box-sizing: border-box; 
-  box-sizing: border-box; 
-  box-sizing: padding-box;
-  overflow: hidden;
-  resize: none;
-  font-family: 'Battambang', 'Open Sans';
-  line-height: 1.6;
-
-  padding: 4px;
-  font-size: 14.5px;
-  margin: 0px auto;
-  border-radius: 0px;
-  box-shadow: 2px 2px 8px rgba(black, .01);
-  border: 0;
-  
-  &:focus{
-    border: none;
-    outline: none;
-  }
-}
-table {
+div.blueTable {
   border-collapse: collapse;
   width:100%;
-  -webkit-box-sizing: border-box; 
-  -moz-box-sizing: border-box; 
 }
-
-td, th {
-  border: 1px solid #999;
-  padding: 0.1rem;
-  text-align: left;
+.divTable.blueTable .divTableCell, .divTable.blueTable .divTableHead {
+  border: 1px solid #AAAAAA;
 }
-th {
-  text-align: center;
-  padding: 0.5rem;
-  line-height: 1.6;
+.divTable.blueTable .divTableBody .divTableCell {
+  font-size: 13px;
 }
+/* DivTable.com */
+.divTable{ display: table; }
+.divTableRow { display: table-row; }
+.divTableHeading { display: table-header-group;}
+.divTableCell, .divTableHead { display: table-cell;}
+.divTableHeading { display: table-header-group;}
+.divTableFoot { display: table-footer-group;}
+.divTableBody { display: table-row-group;}
 </style>
 
 <!--paper.css-->
@@ -117,7 +94,7 @@ body.legal.landscape  .sheet { width: 357mm; height: 215mm }
 </style>
 <!--paper.min.css-->
 <style>
-@page{margin:0}body{margin:0}.sheet{margin:0;overflow:hidden;position:relative;box-sizing:border-box;page-break-after:always}body.A3 .sheet{width:297mm;height:419mm}body.A3.landscape .sheet{width:420mm;height:296mm}body.A4 .sheet{width:210mm;height:296mm}body.A4.landscape .sheet{width:297mm;height:209mm}body.A5 .sheet{width:148mm;height:209mm}body.A5.landscape .sheet{width:210mm;height:147mm}body.letter .sheet{width:216mm;height:279mm}body.letter.landscape .sheet{width:280mm;height:215mm}body.legal .sheet{width:216mm;height:356mm}body.legal.landscape .sheet{width:357mm;height:215mm}.sheet.padding-10mm{padding:10mm}.sheet.padding-15mm{padding:15mm}.sheet.padding-20mm{padding:20mm}.sheet.padding-25mm{padding:25mm}@media screen{body{background:#e0e0e0}.sheet{background:#fff;box-shadow:0 .5mm 2mm rgba(0,0,0,.3);margin:5mm auto}}@media print{body.A3.landscape{width:420mm}body.A3,body.A4.landscape{width:297mm}body.A4,body.A5.landscape{width:210mm}body.A5{width:148mm}body.legal,body.letter{width:216mm}body.letter.landscape{width:280mm}body.legal.landscape{width:357mm}}
+@page{margin:0}body{margin:0}.sheet{margin:0;overflow:hidden;position:relative;box-sizing:border-box;page-break-after:always}body.A3 .sheet{width:297mm;height:419mm}body.A3.landscape .sheet{width:420mm;height:296mm}body.A4 .sheet{width:210mm;height:296mm}body.A4.landscape .sheet{width:297mm;height:209mm}body.A5 .sheet{width:148mm;height:309mm}body.A5.landscape .sheet{width:210mm;height:147mm}body.letter .sheet{width:216mm;height:279mm}body.letter.landscape .sheet{width:280mm;height:215mm}body.legal .sheet{width:216mm;height:356mm}body.legal.landscape .sheet{width:357mm;height:215mm}.sheet.padding-10mm{padding:10mm}.sheet.padding-15mm{padding:15mm}.sheet.padding-20mm{padding:20mm}.sheet.padding-25mm{padding:25mm}@media screen{body{background:#e0e0e0}.sheet{background:#fff;box-shadow:0 .5mm 2mm rgba(0,0,0,.3);margin:5mm auto}}@media print{body.A3.landscape{width:420mm}body.A3,body.A4.landscape{width:297mm}body.A4,body.A5.landscape{width:210mm}body.A5{width:148mm}body.legal,body.letter{width:216mm}body.letter.landscape{width:280mm}body.legal.landscape{width:357mm}}
 </style>
 
 <script>
@@ -172,7 +149,7 @@ document.addEventListener('input', onExpandableTextareaInput)
 
 <!-- Set "A5", "A4" or "A3" for class name -->
 <!-- Set also "landscape" if you need -->
-<body class="A4 landscape">
+<body class="A5 ">
 
 
 
@@ -181,131 +158,103 @@ document.addEventListener('input', onExpandableTextareaInput)
   <section class="sheet padding-10mm" style="font-family: 'Battambang', 'Open Sans';">
 
     <!-- Write HTML just like a web page -->
-	<!--
-	<img src="image/sremeas-logo.svg" style="width:110px; alt="Sremeas Logo">
-    <article style="font-family: 'Battambang', 'Open Sans'; text-align:center; font-size: 17px;"><b>ផែនការសកម្មភាពទីផ្សារប្រចាំសប្តាហ៍</b></article><br>
-	-->
-<table>
-<tr>
-    <td style="width:200px;border: 0px;"><img src="sremeas-logo.svg" style="width:120px; alt="Sremeas Logo"></td>
-    <td style="border: 0px;text-align:center;font-family: 'Battambang', 'Open Sans';font-size: 18px;"><b>ផែនការសកម្មភាពទីផ្សារប្រចាំសប្តាហ៍</b></td>
-    <td style="width:200px;border: 0px;text-align:right;font-family: 'Battambang', 'Open Sans';font-size: 17px;">© SREMEAS 2021</td>
-</tr>
-</table>
+	
+	<img src="https://plan.sremeas.com/sremeas-logo.svg" style="width:110px; alt="Sremeas Logo">
+    <article style="font-family: 'Battambang', 'Open Sans'; text-align:center; font-size: 17px;"><b>តារាងកំណត់រោគសញ្ញាកង្វះសារធាតុចិញ្ចឹមលើរុក្ខជាតិ</b></article>
+	
 
-<table style="border: 0px;">
-
-  <tr>
-    <td style="width:50px;border: 0px;">សាខា :</td>
-    <td style="border: 0px;"><textarea class='autoExpand' rows='1' data-min-rows='1'  autofocus placeholder='_______________________'></textarea></td>
-    <td style="width:90px;border: 0px;">អ្នកធ្វើផែនការ :</td>
-    <td style="border: 0px;"><textarea class='autoExpand' rows='1' data-min-rows='1'  autofocus placeholder='_______________________'></textarea></td>
-    <td style="width:100px;border: 0px;"></td>
-    <td style="width:150px;border: 0px;">កាលបរិច្ឆេទ : ចាប់ពីថ្ងៃទី</td>
-    <td style="width:60px;border: 0px;"><textarea class='autoExpand' rows='1' data-min-rows='1'  autofocus placeholder='_________'></textarea></td>    
-	<td style="width:50px;border: 0px;">ដល់ថ្ងៃទី</td>
-    <td style="width:60px;border: 0px;"><textarea class='autoExpand' rows='1' data-min-rows='1'  autofocus placeholder='_________'></textarea></td>
-    <td style="width:20px;border: 0px;">ខែ</td>
-    <td style="border: 0px;"><textarea class='autoExpand' rows='1' data-min-rows='1'  autofocus placeholder='_______________________'></textarea></td>
-  </tr>
-
-
-
-</table>
 </p>
 
 
-<p>
-<table>
-    <tr>
-        <th style="width:10px">№</th>
-        <th style="width:20px">ថ្ងៃទី</th>
-        <th style="width:100px">ទីកន្លែង</th>
-        <th style="width:100px">ឈ្មោះអតិថិជន</th>
-        <th style="width:100px">លេខទូរស័ព្ទ</th>
-        <th style="width:100px">ដំណាំ និង ផ្ទៃដី</th>
-        <th>គោលបំណង/សកម្មភាព</th>
-        <th style="width:100px">ក្រុមការងារ</th>
-        <th style="width:75px">ផ្សេងៗ</th>
-    </tr>
-    <tr>
-        <td style="text-align: center;">1</td>
-        <td><textarea  style="text-align: center;"class='autoExpand' rows='1' data-min-rows='1'  autofocus></textarea></td>
-        <td><textarea class='autoExpand' rows='1' data-min-rows='1'  autofocus></textarea></td>
-        <td><textarea class='autoExpand' rows='1' data-min-rows='1'  autofocus></textarea></td>
-        <td><textarea class='autoExpand' rows='1' data-min-rows='1'  autofocus></textarea></td>
-        <td><textarea class='autoExpand' rows='1' data-min-rows='1'  autofocus></textarea></td>
-        <td><textarea class='autoExpand' rows='1' data-min-rows='1'  autofocus></textarea></td>
-        <td><textarea class='autoExpand' rows='1' data-min-rows='1'  autofocus></textarea></td>
-        <td><textarea class='autoExpand' rows='1' data-min-rows='1'  autofocus></textarea></td>
-    </tr>
-    <tr>
-        <td style="text-align: center;">2</td>
-        <td><textarea  style="text-align: center;"class='autoExpand' rows='1' data-min-rows='1'  autofocus></textarea></td>
-        <td><textarea class='autoExpand' rows='1' data-min-rows='1'  autofocus></textarea></td>
-        <td><textarea class='autoExpand' rows='1' data-min-rows='1'  autofocus></textarea></td>
-        <td><textarea class='autoExpand' rows='1' data-min-rows='1'  autofocus></textarea></td>
-        <td><textarea class='autoExpand' rows='1' data-min-rows='1'  autofocus></textarea></td>
-        <td><textarea class='autoExpand' rows='1' data-min-rows='1'  autofocus></textarea></td>
-        <td><textarea class='autoExpand' rows='1' data-min-rows='1'  autofocus></textarea></td>
-        <td><textarea class='autoExpand' rows='1' data-min-rows='1'  autofocus></textarea></td>
-    </tr>
-    <tr>
-        <td style="text-align: center;">3</td>
-        <td><textarea  style="text-align: center;"class='autoExpand' rows='1' data-min-rows='1'  autofocus></textarea></td>
-        <td><textarea class='autoExpand' rows='1' data-min-rows='1'  autofocus></textarea></td>
-        <td><textarea class='autoExpand' rows='1' data-min-rows='1'  autofocus></textarea></td>
-        <td><textarea class='autoExpand' rows='1' data-min-rows='1'  autofocus></textarea></td>
-        <td><textarea class='autoExpand' rows='1' data-min-rows='1'  autofocus></textarea></td>
-        <td><textarea class='autoExpand' rows='1' data-min-rows='1'  autofocus></textarea></td>
-        <td><textarea class='autoExpand' rows='1' data-min-rows='1'  autofocus></textarea></td>
-        <td><textarea class='autoExpand' rows='1' data-min-rows='1'  autofocus></textarea></td>
-    </tr>
-    <tr>
-        <td style="text-align: center;">4</td>
-        <td><textarea  style="text-align: center;"class='autoExpand' rows='1' data-min-rows='1'  autofocus></textarea></td>
-        <td><textarea class='autoExpand' rows='1' data-min-rows='1'  autofocus></textarea></td>
-        <td><textarea class='autoExpand' rows='1' data-min-rows='1'  autofocus></textarea></td>
-        <td><textarea class='autoExpand' rows='1' data-min-rows='1'  autofocus></textarea></td>
-        <td><textarea class='autoExpand' rows='1' data-min-rows='1'  autofocus></textarea></td>
-        <td><textarea class='autoExpand' rows='1' data-min-rows='1'  autofocus></textarea></td>
-        <td><textarea class='autoExpand' rows='1' data-min-rows='1'  autofocus></textarea></td>
-        <td><textarea class='autoExpand' rows='1' data-min-rows='1'  autofocus></textarea></td>
-    </tr>
-    <tr>
-        <td style="text-align: center;">5</td>
-        <td><textarea  style="text-align: center;"class='autoExpand' rows='1' data-min-rows='1'  autofocus></textarea></td>
-        <td><textarea class='autoExpand' rows='1' data-min-rows='1'  autofocus></textarea></td>
-        <td><textarea class='autoExpand' rows='1' data-min-rows='1'  autofocus></textarea></td>
-        <td><textarea class='autoExpand' rows='1' data-min-rows='1'  autofocus></textarea></td>
-        <td><textarea class='autoExpand' rows='1' data-min-rows='1'  autofocus></textarea></td>
-        <td><textarea class='autoExpand' rows='1' data-min-rows='1'  autofocus></textarea></td>
-        <td><textarea class='autoExpand' rows='1' data-min-rows='1'  autofocus></textarea></td>
-        <td><textarea class='autoExpand' rows='1' data-min-rows='1'  autofocus></textarea></td>
-    </tr>
-    <tr>
-        <td style="text-align: center;">6</td>
-        <td><textarea  style="text-align: center;"class='autoExpand' rows='1' data-min-rows='1'  autofocus></textarea></td>
-        <td><textarea class='autoExpand' rows='1' data-min-rows='1'  autofocus></textarea></td>
-        <td><textarea class='autoExpand' rows='1' data-min-rows='1'  autofocus></textarea></td>
-        <td><textarea class='autoExpand' rows='1' data-min-rows='1'  autofocus></textarea></td>
-        <td><textarea class='autoExpand' rows='1' data-min-rows='1'  autofocus></textarea></td>
-        <td><textarea class='autoExpand' rows='1' data-min-rows='1'  autofocus></textarea></td>
-        <td><textarea class='autoExpand' rows='1' data-min-rows='1'  autofocus></textarea></td>
-        <td><textarea class='autoExpand' rows='1' data-min-rows='1'  autofocus></textarea></td>
-    </tr>
-    <tr>
-        <td style="text-align: center;">7</td>
-        <td><textarea  style="text-align: center;"class='autoExpand' rows='1' data-min-rows='1'  autofocus></textarea></td>
-        <td><textarea class='autoExpand' rows='1' data-min-rows='1'  autofocus></textarea></td>
-        <td><textarea class='autoExpand' rows='1' data-min-rows='1'  autofocus></textarea></td>
-        <td><textarea class='autoExpand' rows='1' data-min-rows='1'  autofocus></textarea></td>
-        <td><textarea class='autoExpand' rows='1' data-min-rows='1'  autofocus></textarea></td>
-        <td><textarea class='autoExpand' rows='1' data-min-rows='1'  autofocus></textarea></td>
-        <td><textarea class='autoExpand' rows='1' data-min-rows='1'  autofocus></textarea></td>
-        <td><textarea class='autoExpand' rows='1' data-min-rows='1'  autofocus></textarea></td>
-    </tr>
 
+<p>
+<style type="text/css">
+.tg  {border-collapse:collapse;border-spacing:0;}
+.tg td{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
+  overflow:hidden;padding:10px 5px;word-break:normal;}
+.tg th{text-align:center;border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
+  font-weight:normal;overflow:hidden;padding:10px 5px;word-break:normal;}
+.tg .tg-0pky{border-color:inherit;text-align:center;vertical-align:top}
+.tg .tg-0lax{text-align:center;vertical-align:middle}
+</style>
+<table class="tg">
+<thead>
+  <tr>
+    <th class="tg-0pky" colspan="4">ស្លឹក​ចាស់​ៗ</th>
+  </tr>
+</thead>
+<tbody>
+  <tr>
+    <td class="tg-0lax" colspan="2">រោគ​សញ្ញា​លើតែផ្នែកខាងក្រោមទាំងមូល</td>
+    <td class="tg-0lax" colspan="2">រោគសញ្ញាលើរុក្ខជាតិទាំងមូល</td>
+  </tr>
+  <tr>
+    <td class="tg-0lax">រុក្ខជាតិបៃតងខ្ចីៗ ស្លឹកផ្នែកខាងក្រោមពណ៌ លឿង ស្ងួតទៅជាពណ៌ត្នោត</td>
+    <td class="tg-0lax">រុក្ខជាតិបៃតងចាស់ជាមួយ​ ពណ៌ក្រហម ឬស្វាយ។ ស្លឹក ផ្នែកខាងក្រោមពណ៌ លឿង​ ស្ងួតទៅជាពណ៌បៃតងចាស់</td>
+    <td class="tg-0lax">ស្លឹកចាស់ពណ៌លឿងនៅគែម ស្លឹក ប៉ុន្តែរក្សាពណ៌បៃតង នៅ​កណ្តាលស្លឹក</td>
+    <td class="tg-0lax">ស្លឹកចាស់ស្រពោន ឬខ្លោចៗ​នៅគែម ស្លឹកជាំខ្មៅ​ និងមានអុជៗលើស្លឹកទាំងមូល</td>
+  </tr>
+  <tr>
+    <td class="tg-0lax">អាសូត</td>
+    <td class="tg-0lax">ផូស្វ័រ</td>
+    <td class="tg-0lax">ម៉ាញេស្យូម</td>
+    <td class="tg-0lax">ប៉ូតាស្យូម</td>
+  </tr>
+
+</tbody>
+</table>
+
+</p>
+
+<p>
+<table class="tg">
+<thead>
+  <tr>
+    <th class="tg-0lax" colspan="7">ស្លឹកខ្ចីៗ</th>
+  </tr>
+</thead>
+<tbody>
+  <tr>
+    <td class="tg-0lax" colspan="3">ស្លឹករមូ និង/ឬក៏ រលួយ</td>
+    <td class="tg-0lax" colspan="4">ភាពស្លេកស្លាំនៃស្លឹក</td>
+  </tr>
+  <tr>
+    <td class="tg-0lax">ចុងត្រួយងាប់</td>
+    <td class="tg-0lax" colspan="2">ចុងត្រួយមិនងាប់</td>
+    <td class="tg-0lax">ស្លឹកទាំងមូលស្លេកស្លាំង ឆ្លងពាសពេញ
+រុក្ខជាតិទាំងមូល</td>
+    <td class="tg-0lax" colspan="3">ភាពស្លេកស្លាំងដោយឡែកពីគ្នា</td>
+  </tr>
+  <tr>
+    <td class="tg-0lax"></td>
+    <td class="tg-0lax">ស្លឹកខ្ចីរមូចុង និងគែមរលួយ</td>
+    <td class="tg-0lax">រុក្ខជាតិក្រិន ស្លឹកក្រហម បៃតង តូច និងរមូ</td>
+    <td class="tg-0lax"></td>
+    <td class="tg-0lax">ដងដើមខ្លីៗក្រង៉ិក្រង៉ក់</td>
+    <td class="tg-0lax" colspan="2">ដងដើមមិនខ្លីៗ ឬក្រង៉ិក្រង៉ក់</td>
+  </tr>
+  <tr>
+    <td class="tg-0lax"></td>
+    <td class="tg-0lax"></td>
+    <td class="tg-0lax"></td>
+    <td class="tg-0lax"></td>
+    <td class="tg-0lax"></td>
+    <td class="tg-0lax">ស្លឹកគ្មានស្នាម
+អុចៗ រលួយទេ</td>
+    <td class="tg-0lax">ស្លឹកបង្កើតស្នាម
+អុចៗរលួយ</td>
+  </tr>
+  <tr>
+    <td class="tg-0lax">បរ</td>
+    <td class="tg-0lax">កាល់ស្យូម</td>
+    <td class="tg-0lax">ទង់ដែង</td>
+    <td class="tg-0lax">ស៊ុលផួរ</td>
+    <td class="tg-0lax">ស័ង្កសី</td>
+    <td class="tg-0lax">ដែក</td>
+    <td class="tg-0lax">ម៉ងកាណែស</td>
+  </tr>
+
+</tbody>
 </table>
 </p>
 
